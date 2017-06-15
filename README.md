@@ -28,7 +28,7 @@ The goals / steps of this project are the following:
 [video1]: ./project_video_output.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
-###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
 
 ---
 ### Writeup / README
@@ -79,6 +79,12 @@ parameters = {'C':[1, 10] }
 svr = LinearSVC()
 svc = GridSearchCV(svr, parameters)
 ```
+
+Here is my running result:
+
+Test Accuracy of svc =  0.9887
+best params is:  {'C': 1}
+
 
 ### Sliding Window Search
 
