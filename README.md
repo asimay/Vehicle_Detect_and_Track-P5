@@ -1,5 +1,5 @@
 
-**Vehicle Detection Project**
+## **Vehicle Detection Project**
 
 ---
 
@@ -25,10 +25,16 @@ The goals / steps of this project are the following:
 [image9]: ./output_images/bboxes_and_heat2.png
 [image10]: ./output_images/bboxes_and_heat3.png
 [image11]: ./output_images/bboxes_and_heat4.png
+[image12]: ./output_images/final.gif
 [video1]: ./project_video_output.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
+
+---
+
+Final video:
+![alt text][image12]
 
 ---
 ### Writeup / README
@@ -82,9 +88,10 @@ svc = GridSearchCV(svr, parameters)
 
 Here is my running result:
 
+```python
 Test Accuracy of svc =  0.9887
 best params is:  {'C': 1}
-
+```
 
 ### Sliding Window Search
 
