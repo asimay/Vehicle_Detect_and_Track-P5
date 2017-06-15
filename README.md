@@ -34,6 +34,7 @@ The goals / steps of this project are the following:
 ---
 
 Final video:
+
 ![alt text][image12]
 
 ---
