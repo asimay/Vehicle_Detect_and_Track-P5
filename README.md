@@ -72,7 +72,13 @@ hist_bins = 64
 
 #### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using LinearSVC(), and I used RGB->YCrCb color space transform, bin_spatial, and color histogram method, and Hog feature extraction to extract combined features  and train the classifier.
+I trained a linear SVM using LinearSVC() and GridSearchCV() method, and I used RGB->YCrCb color space transform, bin_spatial, and color histogram method, and Hog feature extraction to extract combined features  and train the classifier.
+
+```python
+parameters = {'C':[1, 10] } 
+svr = LinearSVC()
+svc = GridSearchCV(svr, parameters)
+```
 
 ### Sliding Window Search
 
@@ -109,7 +115,7 @@ Here's a [link to my video result](./project_video_output.mp4)
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
-### Here are 3 frames and their corresponding heatmaps, and output of `scipy.ndimage.measurements.label()` on the integrated heatmap, and the resulting bounding boxes are drawn onto the images:
+#### 3. Here are 3 frames and their corresponding heatmaps, and output of `scipy.ndimage.measurements.label()` on the integrated heatmap, and the resulting bounding boxes are drawn onto the images:
 
 ![alt text][image8]
 ![alt text][image9]
